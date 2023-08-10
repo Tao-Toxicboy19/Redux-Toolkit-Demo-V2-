@@ -11,7 +11,7 @@ export const store = configureStore({
     },
 });
 
-export type AppThunk = ThunkAction<void, RootState, unknown, Action<string>>; // ประกาศประเภท AppThunk ที่ใช้กับ Redux Thunk
+export type AppThunk = ThunkAction<void, RootState, unknown, Action<string>>;
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
