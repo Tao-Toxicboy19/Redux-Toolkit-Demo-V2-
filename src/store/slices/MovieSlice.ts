@@ -1,10 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { AppThunk, RootState } from "../store";
-import { Movie } from "../../types/Movie.type";
-import { MovieState } from "../../types/MovieState.type";
-
-
+import { Movie, MovieState } from "../../types/Movie.type";
 
 const initialState: MovieState = {
     movie: [],

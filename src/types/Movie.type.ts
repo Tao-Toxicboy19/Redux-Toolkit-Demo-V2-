@@ -5,3 +5,9 @@ export interface Movie {
     Type: string
     Poster: string
 }
+
+export interface MovieState {
+    movie: Movie[]
+    loading: boolean
+    error: string | null
+}

@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { AppThunk, RootState } from "../store";
-import { PostsState } from "../../types/PostState.type";
-import { Post } from "../../types/Post.type";
+import { Post, PostsState } from "../../types/Post.type";
 
 const initialState: PostsState = {
     data: [],
