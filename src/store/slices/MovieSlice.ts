@@ -28,12 +28,6 @@ const movieSlice = createSlice({
     },
 });
 
-export const {
-    fetchMovieStart,
-    fetchMovieSuccess,
-    fetchMovieFailure,
-} = movieSlice.actions;
-
 export const fetchMovie = (): AppThunk => async (dispatch) => {
     try {
         dispatch(fetchMovieStart());
@@ -46,5 +40,10 @@ export const fetchMovie = (): AppThunk => async (dispatch) => {
     }
 };
 
+export const {
+    fetchMovieStart,
+    fetchMovieSuccess,
+    fetchMovieFailure,
+} = movieSlice.actions;
 export const selectMovieState = (state: RootState) => state.movie;
 export default movieSlice.reducer;
