@@ -3,6 +3,7 @@ import { RootState } from "./store/store";
 import { login, logout } from "./store/slices/loginSlice";
 import Header from "./components/Header/Header";
 import Home from "./components/Pages/Home/Home";
+import Movie from "./components/Pages/Movie/Movie";
 
 type Props = {};
 
@@ -17,7 +18,8 @@ export default function App({}: Props) {
       <button onClick={() => dispatch(logout())}>logout</button> */}
       {/* <hr /> */}
       <h1>{logins.toString()}</h1>
-      <Home/>
+      {/* <Home/> */}
+      <Movie/>
     </>
   );
 }
