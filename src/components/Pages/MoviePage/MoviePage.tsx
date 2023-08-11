@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovie, selectMovieState } from "../../../store/slices/MovieSlice";
 import { AppDispatch } from "../../../store/store";
 
-const MoviesComponent: React.FC = () => {
+type Props = {};
+
+export default function HomePage({}: Props) {
   const dispatch = useDispatch<AppDispatch>();
   const movieState = useSelector(selectMovieState);
   useEffect(() => {
@@ -21,13 +23,6 @@ const MoviesComponent: React.FC = () => {
       ) : (
         <div>
           <h1>Movies</h1>
-          {/* <ul>
-            {movieState.movie.map((movie) => (
-              <li key={movie.imdbId}>
-                {movie.title} ({movie.year})
-              </li>
-            ))}
-          </ul> */}
           <ul>
             {movieState.movie.map((movie) => (
               <li key={movie.imdbID}>
@@ -39,6 +34,4 @@ const MoviesComponent: React.FC = () => {
       )}
     </div>
   );
-};
-
-export default MoviesComponent;
+}

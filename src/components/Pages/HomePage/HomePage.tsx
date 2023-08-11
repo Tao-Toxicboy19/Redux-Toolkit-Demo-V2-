@@ -5,7 +5,7 @@ import { AppDispatch, RootState } from "../../../store/store";
 
 type Props = {};
 
-export default function Home({}: Props) {
+export default function HomePage({}: Props) {
   const dispatch = useDispatch<AppDispatch>();
   const posts = useSelector((state: RootState) => state.posts);
 
